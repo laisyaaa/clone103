@@ -17,7 +17,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN composer install --no-dev --optimize-autoloader
 
 # Buka port yang akan dipakai Render
-EXPOSE 10000
+EXPOSE 8080
 
 # Jalankan Laravel server
 CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=10000"]
